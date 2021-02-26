@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bhuaysan.controller.GuiController">
+   <children>
+      <VBox layoutX="87.0" layoutY="73.0" prefHeight="410.0" prefWidth="117.0" spacing="10.0">
+         <children>
+            <TextField fx:id="tfSi" prefHeight="25.0" prefWidth="69.0" />
+            <TextField fx:id="tfTi" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="tfAl" layoutX="10.0" layoutY="35.0" />
+            <TextField fx:id="tfCr" layoutX="10.0" layoutY="60.0" />
+            <TextField fx:id="tfFe" layoutX="10.0" layoutY="85.0" />
+            <TextField fx:id="tfFeo" layoutX="10.0" layoutY="110.0" />
+            <TextField fx:id="tfMn" layoutX="10.0" layoutY="135.0" />
+            <TextField fx:id="tfMg" layoutX="10.0" layoutY="160.0" />
+            <TextField fx:id="tfCa" layoutX="10.0" layoutY="185.0" />
+            <TextField fx:id="tfNa" layoutX="10.0" layoutY="210.0" />
+            <TextField fx:id="tfK" layoutX="10.0" layoutY="235.0" />
+            <TextField fx:id="tfH" layoutX="10.0" layoutY="260.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="26.0" layoutY="73.0" prefHeight="410.0" prefWidth="51.0" spacing="15.0">
+         <children>
+            <Label fx:id="tlSi" text="SiO2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tlTi" layoutX="10.0" layoutY="10.0" text="TiO2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tlAl" layoutX="10.0" layoutY="27.0" text="Al2O3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tlCr" layoutX="10.0" layoutY="44.0" text="Cr2O3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tlFe" layoutX="10.0" layoutY="61.0" text="Fe2O3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tlFeo" layoutX="10.0" layoutY="78.0" text="FeO">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tlMn" layoutX="10.0" layoutY="95.0" text="MnO">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tlMg" layoutX="10.0" layoutY="112.0" text="MgO">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tlCa" layoutX="10.0" layoutY="129.0" text="CaO">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tlNa" layoutX="10.0" layoutY="146.0" text="Na2O">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tlK" layoutX="10.0" layoutY="163.0" text="K2O">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="tlH" layoutX="10.0" layoutY="180.0" text="H2O">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button layoutX="113.0" layoutY="540.0" mnemonicParsing="false" onAction="#calculation" text="Calculate" />
+      <Label fx:id="lblOxy" layoutX="26.0" layoutY="497.0" prefHeight="32.0" prefWidth="100.0" text="Oxygen Number" />
+      <TextField fx:id="tfOxy" layoutX="120.0" layoutY="500.0" prefHeight="25.0" prefWidth="51.0" />
+      <HBox layoutX="226.0" layoutY="45.0" prefHeight="486.0" prefWidth="501.0" spacing="15.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="437.0" prefWidth="81.0" spacing="15.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="66.0" text="Atom Units">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSi" text="NaN">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTi" layoutX="10.0" layoutY="10.0" text="NaN">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAl" layoutX="10.0" layoutY="27.0" text="NaN">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCr" layoutX="10.0" layoutY="44.0" text="NaN">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFe" layoutX="10.0" layoutY="61.0" text="NaN">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFeo" layoutX="10.0" layoutY="78.0" text="NaN">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMn" layoutX="10.0" layoutY="95.0" text="NaN">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMg" layoutX="10.0" layoutY="112.0" text="NaN">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCa" layoutX="10.0" layoutY="129.0" text="NaN">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblNa" layoutX="10.0" layoutY="146.0" text="NaN">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblK" layoutX="10.0" layoutY="163.0" text="NaN">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblH" layoutX="10.0" layoutY="163.0" text="NaN">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="437.0" prefWidth="96.0" spacing="15.0">
+               <children>
+                  <Label text="Molecular Units">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSiMU" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTiMU" layoutX="10.0" layoutY="10.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAlMU" layoutX="10.0" layoutY="27.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCrMU" layoutX="10.0" layoutY="44.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFeMU" layoutX="10.0" layoutY="61.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFeoMU" layoutX="10.0" layoutY="78.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMnMU" layoutX="10.0" layoutY="95.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMgMU" layoutX="10.0" layoutY="112.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCaMU" layoutX="10.0" layoutY="129.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblNaMU" layoutX="10.0" layoutY="146.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblKMU" layoutX="10.0" layoutY="163.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblHMU" layoutX="10.0" layoutY="163.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="437.0" prefWidth="90.0" spacing="15.0">
+               <children>
+                  <Label text="Oxygen Units">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSiOU" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTiOU" layoutX="10.0" layoutY="10.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAlOU" layoutX="10.0" layoutY="27.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCrOU" layoutX="10.0" layoutY="44.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFeOU" layoutX="10.0" layoutY="61.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFeoOU" layoutX="10.0" layoutY="78.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMnOU" layoutX="10.0" layoutY="95.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMgOU" layoutX="10.0" layoutY="112.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCaOU" layoutX="10.0" layoutY="129.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblNaOU" layoutX="10.0" layoutY="146.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblKOU" layoutX="10.0" layoutY="163.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblHOU" layoutX="10.0" layoutY="163.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="357.0" layoutY="10.0" prefHeight="437.0" prefWidth="160.0" spacing="15.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="149.0" text="Normalized Oxygen Units">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSiNOU" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTiNOU" layoutX="10.0" layoutY="10.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAlNOU" layoutX="10.0" layoutY="27.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCrNOU" layoutX="10.0" layoutY="44.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFeNOU" layoutX="10.0" layoutY="61.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFeoNOU" layoutX="10.0" layoutY="78.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMnNOU" layoutX="10.0" layoutY="95.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMgNOU" layoutX="10.0" layoutY="112.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCaNOU" layoutX="10.0" layoutY="129.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblNaNOU" layoutX="10.0" layoutY="146.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblKNOU" layoutX="10.0" layoutY="163.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblHNOU" layoutX="10.0" layoutY="163.0" text="NaN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="91.0" layoutY="45.0" text="Weight Percent [%]">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
