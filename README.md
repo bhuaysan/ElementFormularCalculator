@@ -3,7 +3,7 @@ Calculates the chemical formula from EMP or XRF data.
 
 How it works:
 
-Chemical analyses for silicate based minerals are commonly done in weight percentages of the oxides of the elements determined. Although the EMP or XRF shows their results in weight percentages the reason behind this is rather more historic. As for the analytical aspect the format is rather unconvienent and needs to be converted. This can be done in a few simple steps:
+Chemical analyses for silicate based minerals are commonly done in weight percentages of the oxides of the elements determined. Although the EMP or XRF shows their results in weight percentages the reason behind this is rather more historic. As for the analytical aspect the format is rather inconvienent and needs to be converted. This can be done in a few simple steps:
 
 1. Division of the weight percentage of each oxide by the formula weight of that oxide.
 2. Multiplication of the resulting "mole number" of each oxide by the number of oxygens in the oxide formula.
