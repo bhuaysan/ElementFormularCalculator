@@ -12,6 +12,6 @@ Chemical analyses for silicate based minerals are commonly done in weight percen
 
 EMP does not differentiate between the valence states of iron which must be considered when analysing iron bearing minerals e.g. Pyroxene or Amphibole. 
 
-This simple JavaFX App will help with the conversion. Just enter the results of the chemical analysis and the number of oxygen for the predicted mineral. The reuslts are given in atoms per formula unit (apfu).
+This simple JavaFX App will help with the conversion. Just enter the results of the chemical analysis and the number of oxygen for the predicted mineral. The results are given in atoms per formula unit (apfu).
 
 
